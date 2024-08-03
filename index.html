@@ -8,7 +8,36 @@
     <title>T Lab</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="resume">
+      <div class="resume__photo">
+        <img src="./src/assets/img/photo.png" alt="Photo" width="124" height="124" />
+      </div>
+      <div class="resume__intro">
+        <p class="intro-greeting" id="intro-1" contenteditable="true">Hello 👋🏻 I&apos;m</p>
+
+        <div class="intro-user">
+          <h1 id="intro-2" contenteditable="true">Natalia</h1>
+          <p class="intro-user__role" id="intro-3" contenteditable="true">Frontend Developer</p>
+        </div>
+      </div>
+      <div class="resume__languages">
+        <h2>Languages</h2>
+        <div class="languages">
+          <div class="language">
+            <span id="language-2" contenteditable="true">Russian</span>
+            <div class="progress-bar" data-level="100%"></div>
+          </div>
+          <div class="language">
+            <span id="language-1" contenteditable="true">English</span>
+            <div class="progress-bar" data-level="70%"></div>
+          </div>
+          <div class="language">
+            <span id="language-3" contenteditable="true">Germany</span>
+            <div class="progress-bar" data-level="20%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>
