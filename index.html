@@ -12,47 +12,103 @@
       <div class="resume__photo">
         <img src="./src/assets/img/photo.png" alt="Photo" width="124" height="124" />
       </div>
-      <div class="resume__intro">
-        <p class="intro-greeting" id="intro-1" contenteditable="true">Hello 👋🏻 I&apos;m</p>
 
-        <div class="intro-user">
+      <div class="resume__intro">
+        <p class="intro__greeting" id="intro-1" contenteditable="true">Hello 👋🏻 I&apos;m</p>
+
+        <div class="intro__user">
           <h1 id="intro-2" contenteditable="true">Natalia</h1>
           <p class="intro-user__role" id="intro-3" contenteditable="true">Frontend Developer</p>
         </div>
       </div>
+
       <div class="resume__languages">
         <h2>Languages</h2>
-        <div class="languages">
-          <div class="language">
-            <span id="language-2" contenteditable="true">Russian</span>
-            <div class="progress-bar" data-level="100%"></div>
+        <div class="languages__list">
+          <div class="languages__item">
+            <div class="language__name" id="language-2" contenteditable="true">Russian</div>
+            <div class="language__level" data-level="100%"></div>
           </div>
-          <div class="language">
-            <span id="language-1" contenteditable="true">English</span>
-            <div class="progress-bar" data-level="70%"></div>
+          <div class="languages__item">
+            <div class="language__name" id="language-1" contenteditable="true">English</div>
+            <div class="language__level" data-level="70%"></div>
           </div>
-          <div class="language">
-            <span id="language-3" contenteditable="true">Germany</span>
-            <div class="progress-bar" data-level="20%"></div>
+          <div class="languages__item">
+            <div class="language__name" id="language-3" contenteditable="true">German</div>
+            <div class="language__level" data-level="20%"></div>
           </div>
         </div>
       </div>
 
       <div class="resume__experience">
         <h2>Experience</h2>
-        <div class="experience">
-          <div class="experience__header">
-            <span id="experience-header-1" contenteditable="true">Jun. 2023 - Present</span>
-            <span id="experience-header-2" contenteditable="true">Most recent</span>
+        <div class="experience__list">
+          <div class="experience-item">
+            <div class="experience__header">
+              <p id="experience-header-1" contenteditable="true">Sep. 2023 - May 2024</p>
+              <p class="experience__label" id="experience-header-2" contenteditable="true">Most recent</p>
+            </div>
+
+            <div class="experience__details">
+              <div class="experience__job-info">
+                <p class="experience__job-name" id="experience-details-1" contenteditable="true">Frontend Developer</p>
+                <p class="experience__about-job" id="experience-details-2" contenteditable="true">Moscow | Full-time</p>
+              </div>
+              <ul class="experience__responsibility">
+                <li id="experience-details-3" contenteditable="true">
+                  Strategy development and planning of campaigns that promote the business and generate genuine traffic
+                </li>
+                <li id="experience-details-4" contenteditable="true">
+                  SEO Content Creation for Blogs, Website, Social media
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="experience__details">
-            <span id="experience-details-1" contenteditable="true">Работа и Должность</span>
-            <span id="experience-details-2" contenteditable="true">Описание обязанностей</span>
+
+          <div class="experience-item">
+            <div class="experience__header">
+              <p id="experience-header-1" contenteditable="true">Sep. 2023 - May 2024</p>
+            </div>
+
+            <div class="experience__details">
+              <div class="experience__job-info">
+                <p class="experience__job-name" id="experience-details-1" contenteditable="true">Frontend Developer</p>
+                <p class="experience__about-job" id="experience-details-2" contenteditable="true">Moscow | Full-time</p>
+              </div>
+              <ul class="experience__responsibility">
+                <li id="experience-details-3" contenteditable="true">
+                  Strategy development and planning of campaigns that promote the business and generate genuine traffic
+                </li>
+                <li id="experience-details-4" contenteditable="true">
+                  SEO Content Creation for Blogs, Website, Social media
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience__header">
+              <p id="experience-header-1" contenteditable="true">Sep. 2023 - May 2024</p>
+            </div>
+
+            <div class="experience__details">
+              <div class="experience__job-info">
+                <p class="experience__job-name" id="experience-details-1" contenteditable="true">Frontend Developer</p>
+                <p class="experience__about-job" id="experience-details-2" contenteditable="true">Moscow | Full-time</p>
+              </div>
+              <ul class="experience__responsibility">
+                <li id="experience-details-3" contenteditable="true">
+                  Strategy development and planning of campaigns that promote the business and generate genuine traffic
+                </li>
+                <li id="experience-details-4" contenteditable="true">
+                  SEO Content Creation for Blogs, Website, Social media
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-
-        <!-- Also 2 blocks -->
       </div>
+
       <div class="resume__tools">
         <h2>Tools</h2>
         <div class="tools__section">
@@ -75,6 +131,28 @@
         </div>
       </div>
       <!-- Also 2 blocks -->
+
+      <div class="resume__education">
+        <h2>Education</h2>
+        <div class="education__block">
+          <p id="education-1" contenteditable="true">Год</p>
+          <p id="education-2" contenteditable="true">UI/UX</p>
+          <p id="education-3" contenteditable="true">#Хэштеги</p>
+          <p id="education-4" contenteditable="true">Coursera</p>
+        </div>
+        <!-- Добавьте еще 2 блока education здесь -->
+      </div>
+      <div class="resume__interests">
+        <h2>Interests</h2>
+        <div class="interests__list">
+          <p id="interest-1" contenteditable="true">Интерес 1</p>
+          <p id="interest-2" contenteditable="true">Интерес 2</p>
+          <!-- Дополните список интересов -->
+        </div>
+        <div class="interests__description">
+          <p id="interests-description" contenteditable="true">Описание интересов</p>
+        </div>
+      </div>
     </div>
     <script type="module" src="./src/js/main.js"></script>
   </body>
