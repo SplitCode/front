@@ -143,6 +143,14 @@ h2 {
   transition: width 0.5s ease-in-out;
 }
 
+.resume__experience {
+  grid-column: 1 / 4;
+}
+
+.resume__tools {
+  grid-column: 4 / 5;
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
