@@ -310,6 +310,9 @@ span.ripple {
   }
 }
 
+@media (hover: hover) and (pointer: fine) {
+}
+
 @media (max-width: 540px) {
   .resume {
     grid-template-columns: repeat(3, 1fr);
