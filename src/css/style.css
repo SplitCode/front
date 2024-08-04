@@ -196,18 +196,18 @@ h2 {
   gap: 0.8rem;
 }
 
-.resume__job-info {
+.experience__job-info {
   display: flex;
   flex-direction: column;
   flex: 0 0 12.4rem;
   line-height: 150%;
 }
 
-.resume__job-name {
+.experience__about-job {
   font-size: 0.8rem;
 }
 
-.experience-item:first-child .experience__about-job {
+.experience__item:first-child .experience__about-job {
   color: var(--semi-light-text-color);
 }
 
@@ -241,9 +241,6 @@ h2 {
   img {
     width: 2.4rem;
     height: 2.4rem;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
   }
 }
 
@@ -269,9 +266,6 @@ h2 {
   grid-column: 1 / 3;
   min-width: 26.8rem;
   padding: 1.2rem 0.8rem 1.2rem 1.2rem;
-  /* display: flex;
-  flex-direction: column;
-  gap: 1.6rem; */
 }
 
 .education__list {
@@ -340,8 +334,6 @@ h2 {
 }
 
 .resume__contact {
-  /* display: flex;
-  flex-direction: column; */
   gap: 1.1rem;
   background-color: var(--dark-bg-color);
   color: var(--light-text-color);
