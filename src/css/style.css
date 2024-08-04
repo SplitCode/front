@@ -60,7 +60,6 @@
 }
 
 .languages__name {
-  line-height: 10px;
   flex: 0 0 5.8rem;
 }
 
@@ -137,6 +136,8 @@
 
 .experience__about-job {
   font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--dark-text-color);
 }
 
 .experience__item:first-child .experience__about-job {
@@ -145,6 +146,7 @@
 
 .experience__responsibility {
   font-size: 0.8rem;
+  font-weight: 400;
   padding-left: 1rem;
 }
 
@@ -177,7 +179,6 @@
   border-radius: 6rem;
   background-color: var(--dark-bg-color);
   color: var(--light-text-color);
-  font-size: 0.75rem;
   white-space: nowrap;
 }
 
@@ -231,17 +232,18 @@
   color: var(--light-text-color);
 }
 
-.education__tags {
+.education__tags,
+.education__schoolname {
   font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.education__tags {
   color: var(--accent-text-color);
 }
 
 .education__item:first-child .education__tags {
   color: var(--semi-light-text-color);
-}
-
-.education__schoolname {
-  font-size: 0.8rem;
 }
 
 .resume__extrabox {
@@ -255,6 +257,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
+  font-weight: 400;
 }
 
 .interests__item {
@@ -269,8 +272,8 @@
   color: var(--light-text-color);
 }
 
-.contact-mail {
-  font-size: 1rem;
+.contact__mail {
+  font-weight: 400;
   color: var(--extra-light-text-color);
 }
 
@@ -287,10 +290,10 @@ button {
   overflow: hidden;
 }
 
-[contenteditable='true'] {
+/* [contenteditable='true'] {
   position: relative;
   overflow: hidden;
-}
+} */
 
 span.ripple {
   position: absolute;
@@ -304,5 +307,50 @@ span.ripple {
   to {
     transform: scale(4);
     opacity: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .resume {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+  }
+
+  .resume__photo {
+    grid-column: 1 / 2;
+  }
+
+  .resume__intro {
+    grid-column: 2 / 4;
+  }
+
+  .resume__languages,
+  .resume__tools,
+  .resume__education,
+  .resume__extrabox {
+    grid-column: 1 / 4;
+  }
+
+  .education__list {
+    justify-content: center;
+  }
+
+  .resume__tools {
+    padding: 1.2rem;
+  }
+
+  .tools__list {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .tools__item {
+    height: fit-content;
+    padding: 1.2rem;
+  }
+
+  button {
+    width: 100%;
+    margin: 1rem 0;
   }
 }
