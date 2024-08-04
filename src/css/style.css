@@ -1,80 +1,6 @@
-@font-face {
-  font-family: Poppins;
-  src: url(../assets/fonts/Poppins-Regular.ttf);
-  font-weight: 400;
-}
+@import './global.css';
 
-@font-face {
-  font-family: Poppins;
-  src: url(../assets/fonts/Poppins-Medium.ttf);
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: Poppins;
-  src: url(../assets/fonts/Poppins-SemiBold.ttf);
-  font-weight: 600;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --light: #ffffff;
-  --dark: #000000;
-
-  --main-font: Poppins, sans-serif;
-  --light-bg-color: var(--light);
-  --dark-bg-color: var(--dark);
-  --box-bg-color: #f0f0f0;
-  --body-bg-color: #1e1e1e;
-  --accent-bg-color: #28d979;
-  --label-bg-color: #7e731266;
-
-  --light-text-color: var(--light);
-  --semi-light-text-color: #ebf9f2;
-  --extra-light-text-color: #dddddd;
-  --dark-text-color: #3f3d3d;
-  --semi-dark-text-color: #5c5c5c;
-  --accent-text-color: #149063;
-  --label-text-color: #ddf163;
-}
-
-html {
-  font-size: 10px;
-}
-
-body {
-  font-family: var(--main-font);
-  margin: 0;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-  /* min-width: 320px; */
-  min-height: 100vh;
-  background-color: var(--body-bg-color);
-}
-
-h1 {
-  font-size: 1.4rem;
-}
-
-h2 {
-  font-size: 1.4rem;
-  font-weight: 400;
-}
-
-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.header {
+/* .header {
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
@@ -82,8 +8,7 @@ button {
   padding: 1rem 2rem;
   background-color: var(--dark-bg-color);
   color: var(--light-text-color);
-}
-
+} */
 .resume {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -369,4 +294,23 @@ button {
   border-radius: 0.3rem;
   color: var(--light-text-color);
   background-color: var(--accent-bg-color);
+  position: relative;
+  overflow: hidden;
+}
+
+/* // */
+
+span.ripple {
+  position: absolute; /* The absolute position we mentioned earlier */
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
 }

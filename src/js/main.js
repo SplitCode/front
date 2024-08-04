@@ -1,5 +1,6 @@
 // import { createInterestsBox } from './interests';
 import './downloadPdf.js';
+import './ripple.js';
 
 // document.querySelector('.edit-button').addEventListener('click', () => {
 //   document.querySelectorAll('[contenteditable]').forEach((element) => {
