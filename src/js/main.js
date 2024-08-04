@@ -9,6 +9,7 @@ import './ripple.js';
 // });
 
 document.addEventListener('DOMContentLoaded', () => {
+  const prefix = 't-lab-';
   // const resume = document.querySelector('.resume');
   // const interestsBox = createInterestsBox();
   // resume.append(interestsBox);
@@ -16,19 +17,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const loadData = () => {
     document.querySelectorAll('[contenteditable="true"]').forEach((element) => {
       const id = element.id;
-      const savedText = localStorage.getItem(id);
+      const savedText = localStorage.getItem(prefix + id);
       if (savedText) {
         element.textContent = savedText;
       }
     });
   };
 
-  const saveData = () => {
-    document.querySelectorAll('[contenteditable="true"]').forEach((element) => {
-      const id = element.id;
-      const text = element.textContent;
-      localStorage.setItem(id, text);
-    });
+  const saveData = (event) => {
+    const element = event.target;
+    // document.querySelectorAll('[contenteditable="true"]').forEach((element) => {
+    const id = element.id;
+    const text = element.textContent;
+    localStorage.setItem(prefix + id, text);
+    // });
   };
 
   document.querySelectorAll('.languages__level').forEach((bar) => {
