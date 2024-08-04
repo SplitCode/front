@@ -8,7 +8,12 @@
     <title>T Lab</title>
   </head>
   <body>
-    <div class="resume">
+    <!-- <header class="header">
+      <button class="header__button download-button">Download PDF</button>
+      <button class="header__button edit-button">Edit</button>
+    </header> -->
+
+    <div class="resume" id="resume">
       <div class="resume__photo box">
         <img src="./src/assets/img/photo.png" alt="Photo" width="124" height="124" />
       </div>
@@ -221,8 +226,13 @@
         </div>
       </div>
     </div>
-
     <button class="download-button">Download PDF</button>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>

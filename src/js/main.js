@@ -1,4 +1,11 @@
 // import { createInterestsBox } from './interests';
+import './downloadPdf.js';
+
+// document.querySelector('.edit-button').addEventListener('click', () => {
+//   document.querySelectorAll('[contenteditable]').forEach((element) => {
+//     element.setAttribute('contenteditable', element.getAttribute('contenteditable') === 'false' ? 'true' : 'false');
+//   });
+// });
 
 document.addEventListener('DOMContentLoaded', () => {
   // const resume = document.querySelector('.resume');
@@ -27,16 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const level = bar.getAttribute('data-level');
     bar.style.setProperty('--progress', level);
   });
-
-  // document.getElementById('download-btn').addEventListener('click', () => {
-  //   html2pdf(document.querySelector('.resume'), {
-  //     margin: 1,
-  //     filename: 'resume.pdf',
-  //     image: { type: 'jpeg', quality: 0.98 },
-  //     html2canvas: { scale: 2 },
-  //     jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
-  //   });
-  // });
 
   document.querySelectorAll('[contenteditable="true"]').forEach((element) => {
     element.addEventListener('input', saveData);
