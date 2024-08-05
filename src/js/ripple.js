@@ -24,7 +24,7 @@ for (const button of buttons) {
   button.addEventListener('click', createRipple);
 }
 
-const editableElements = document.querySelectorAll('[contenteditable="true"]');
+const editableElements = document.querySelectorAll('.editable');
 for (const elem of editableElements) {
   elem.addEventListener('click', createRipple);
 }
