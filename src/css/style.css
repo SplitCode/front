@@ -38,6 +38,7 @@
 }
 
 .intro__role {
+  font-size: 1.2rem;
   color: var(--semi-dark-text-color);
 }
 
@@ -325,8 +326,11 @@ span.ripple {
     outline: 0.1rem dashed var(--dark-text-color);
   }
 
-  .education__header img:hover {
-    transform: scale(1.2);
+  .education__header img:hover,
+  .interests__item:hover,
+  .education__item:hover,
+  .tools__item:hover {
+    transform: scale(1.1);
   }
 
   .resume__button:hover {
@@ -397,6 +401,10 @@ span.ripple {
   width: 30rem;
   text-align: center;
   background-color: var(--light-bg-color);
+}
+
+.modal__text {
+  font-size: 1.4rem;
 }
 
 .modal__buttons {

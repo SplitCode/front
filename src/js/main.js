@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   editableElements.forEach((element) => {
     element.addEventListener('click', (event) => {
       currentElement = event.target;
-      modalInput.value = currentElement.textContent;
+      modalInput.value = currentElement.textContent.trim();
       modal.classList.add('active');
     });
   });
