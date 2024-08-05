@@ -1,6 +1,6 @@
 import html2pdf from 'html2pdf.js';
 
-const downloadButton = document.querySelector('.download-button');
+const downloadButton = document.querySelector('#download-button');
 downloadButton.addEventListener('click', () => {
   const resume = document.getElementById('resume');
   const opt = {

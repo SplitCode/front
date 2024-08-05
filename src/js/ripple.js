@@ -1,6 +1,5 @@
-const createRipple = (event) => {
+function createRipple(event) {
   const element = event.currentTarget;
-
   const circle = document.createElement('span');
   const diameter = Math.max(element.clientWidth, element.clientHeight);
   const radius = diameter / 2;
@@ -11,20 +10,17 @@ const createRipple = (event) => {
   circle.classList.add('ripple');
 
   const ripple = element.getElementsByClassName('ripple')[0];
-
   if (ripple) {
     ripple.remove();
   }
 
   element.appendChild(circle);
-};
+}
 
-const buttons = document.getElementsByTagName('button');
-for (const button of buttons) {
+document.querySelectorAll('.ripple-button').forEach((button) => {
   button.addEventListener('click', createRipple);
-}
+});
 
-const editableElements = document.querySelectorAll('.editable');
-for (const elem of editableElements) {
-  elem.addEventListener('click', createRipple);
-}
+document.querySelectorAll('.box').forEach((box) => {
+  box.addEventListener('click', createRipple);
+});

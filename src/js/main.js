@@ -1,17 +1,12 @@
-// import { createInterestsBox } from './interests';
 import './downloadPdf.js';
 import './ripple.js';
-
-// const resume = document.querySelector('.resume');
-// const interestsBox = createInterestsBox();
-// resume.append(interestsBox);
 
 document.addEventListener('DOMContentLoaded', () => {
   const editableElements = document.querySelectorAll('.editable');
   const modal = document.querySelector('#editModal');
   const modalInput = document.querySelector('#modalInput');
-  const modalSave = document.querySelector('#modalSave');
-  const modalCancel = document.querySelector('#modalCancel');
+  const modalSave = document.querySelector('#save-button');
+  const modalCancel = document.querySelector('#cancel-button');
   let currentElement;
 
   editableElements.forEach((element) => {
@@ -28,10 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
       currentElement.classList.add('animation');
       modal.classList.remove('active');
 
-      // Сохранение в LocalStorage
-      const data = JSON.parse(localStorage.getItem('resumeData')) || {};
+      const data = JSON.parse(localStorage.getItem('t-lab-resumeData')) || {};
       data[currentElement.id] = currentElement.textContent;
-      localStorage.setItem('resumeData', JSON.stringify(data));
+      localStorage.setItem('t-lab-resumeData', JSON.stringify(data));
     }
   });
 
@@ -40,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const loadData = () => {
-    const data = JSON.parse(localStorage.getItem('resumeData'));
+    const data = JSON.parse(localStorage.getItem('t-lab-resumeData'));
     if (data) {
       editableElements.forEach((element) => {
         if (data[element.id]) {
@@ -63,29 +57,3 @@ document.addEventListener('DOMContentLoaded', () => {
     bar.style.setProperty('--progress', level);
   });
 });
-
-// const prefix = 't-lab-';
-
-// const loadData = () => {
-//   document.querySelectorAll('[contenteditable="true"]').forEach((element) => {
-//     const id = element.id;
-//     const savedText = localStorage.getItem(prefix + id);
-//     if (savedText) {
-//       element.textContent = savedText;
-//     }
-//   });
-// };
-
-// const saveData = (event) => {
-//   const element = event.target;
-//   const id = element.id;
-//   const text = element.textContent;
-//   localStorage.setItem(prefix + id, text);
-// };
-
-// document.querySelectorAll('[contenteditable="true"]').forEach((element) => {
-//   element.addEventListener('input', saveData);
-// });
-
-// loadData();
-// });
